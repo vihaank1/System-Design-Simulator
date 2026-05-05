@@ -61,27 +61,32 @@ def generate_system(req: Request):
 def review_system(req: Request):
     system_design = req.prompt
 
-    review_prompt = f"""
-    You are a FAANG reviewer
+    SYSTEM_PROMPT = """
+    You are a FAANG senior interviewer.
 
-    Evaluate this system:
-    {system_design}
+    Return ONLY valid JSON in this format:
 
-   
-    Return ONLY JSON:
-
-    {
-      "scoring": {
-      "scalability": 0-10,
-      "reliability": 0-10,
-      "efficiency": 0-10,
-      "clarity": 0-10
-    },
-    "total_score": 0-40,
-    "bottlenecks": [],
-    "improvements": []
+    return {
+    "summary": summary,
+    "components": components,
+    "database_design": db_design,
+    "apis": apis,
+    "scalability_notes": scalability_notes,
+    "bottlenecks": bottlenecks,
+    "final_score": {
+        "overall": 7.5,
+        "breakdown": {
+            "scalability": 8,
+            "clarity": 7,
+            "completeness": 7
+        },
+        "feedback": [
+            "Good separation of services",
+            "Missing caching layer (Redis)"
+        ]
     }
-    """
+}
+"""
 
     response=client.chat.completions.create(
         model="gpt-4.1-mini",
