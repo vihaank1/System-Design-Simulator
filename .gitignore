@@ -1,10 +1,14 @@
-node_modules/
+# secrets
 .env
-.DS_Store
+
+# python
 __pycache__/
 *.pyc
-frontend/node_modules/
-frontend/build/
-backend/venv/
+venv/
 
-backend/.env
+# node
+node_modules/
+build/
+
+# system
+.DS_Store
