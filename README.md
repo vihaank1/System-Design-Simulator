@@ -1,71 +1,72 @@
 # 🧠 FAANG System Design Simulator
 
-An AI-powered distributed systems interview simulator that generates scalable architectures, evaluates them like a real FAANG interviewer, detects bottlenecks, visualizes system flows, and asks follow-up interview questions dynamically.
+AI-powered system design interview simulator that generates scalable architectures, evaluates them like a FAANG interviewer, detects bottlenecks, visualizes distributed systems, and simulates real interview follow-ups.
 
-Built for practicing real-world system design interviews at scale.
+Built for practicing production-scale distributed systems interviews.
 
 ---
 
 ## 🚀 Features
 
 ### 🏗 AI Architecture Generation
-Generate production-style system designs for prompts like:
+
+Generate scalable system designs for prompts like:
 
 - Design Instagram
 - Design Uber
 - Design YouTube
-- Design a URL Shortener
 - Design WhatsApp
+- Design a URL Shortener
 
-The simulator generates:
+Outputs include:
 
 - Microservices
-- Databases
 - APIs
+- Databases
 - Caching layers
-- Scaling strategies
 - Load balancing
+- Scaling strategies
 - Distributed architecture diagrams
 
 ---
 
-### 📊 FAANG-Style Interview Scoring
+### 📊 FAANG-Style Evaluation
 
-Every generated design is reviewed using a structured engineering rubric.
+Every architecture is reviewed using a structured interview rubric.
 
-Scores include:
+Scoring includes:
 
 - Scalability
 - Clarity
 - Completeness
-- System tradeoffs
+- Engineering tradeoffs
 
-Includes:
+Also generates:
 
-- strengths
-- weaknesses
-- bottlenecks
-- hiring recommendation
-- engineering feedback
+- Strengths
+- Weaknesses
+- Bottlenecks
+- Hiring recommendation
+- Engineering feedback
 
 ---
 
 ### ⚠ Automatic Bottleneck Detection
 
-The simulator automatically detects architectural weaknesses such as:
+Detects issues such as:
 
 - Missing cache layer
 - No CDN
-- Database scaling issues
-- Single points of failure
+- Database bottlenecks
 - Missing replication
+- Single points of failure
 - Poor load balancing
 
 ---
 
 ### 📈 System Diagram Visualization
 
-Architectures are visualized using Mermaid.js diagrams.
+Architectures are rendered using Mermaid.js diagrams.
 
 Example:
 
@@ -74,114 +75,157 @@ graph TD;
 User-->API_Gateway;
 API_Gateway-->Services;
 Services-->Database;
+```
 
-🎤 FAANG Interviewer Mode
+---
 
-Simulates real senior engineer follow-up questioning.
+### 🎤 Interviewer Mode
+
+Simulates real FAANG follow-up questioning.
 
 Generates:
 
-Follow-up architecture questions
-Scalability pressure scenarios
-Tradeoff discussions
-Debugging situations
+- Follow-up design questions
+- Scalability pressure scenarios
+- Tradeoff discussions
+- Debugging situations
 
-Designed to mimic Google / Meta / Amazon interview pressure.
+---
 
-🖥 Tech Stack
-Frontend
-React
-Axios
-Mermaid.js
-Backend
-FastAPI
-OpenAI API
-Python
-AI / Infrastructure Concepts
-Distributed Systems
-Scalability Engineering
-System Design Interview Evaluation
-Microservices Architecture
-📸 Example Workflow
-Input
+## 🖥 Tech Stack
+
+### Frontend
+- React
+- Axios
+- Mermaid.js
+
+### Backend
+- FastAPI
+- Python
+- OpenAI API
+
+### Concepts
+- Distributed Systems
+- System Design
+- Scalability Engineering
+- Microservices Architecture
+
+---
+
+## 📸 Example
+
+### Input
+
+```txt
 Design Instagram backend
-Output
-Microservices architecture
-Feed generation system
-CDN layer
-Redis caching
-Load balancing
-Database sharding
-Mermaid architecture diagram
-FAANG interview evaluation
-Bottleneck analysis
-Follow-up interview questions
-⚡ Running Locally
-1. Clone Repository
+```
+
+### Output
+
+- Microservices architecture
+- Feed generation system
+- Redis caching
+- CDN layer
+- Database sharding
+- Load balancing
+- Mermaid system diagram
+- FAANG interview evaluation
+- Bottleneck analysis
+- Interview follow-up questions
+
+---
+
+## ⚡ Local Setup
+
+### 1. Clone Repository
+
+```bash
 git clone <your-repo-url>
 cd system-design-simulator
-2. Backend Setup
+```
+
+---
+
+### 2. Backend Setup
+
+```bash
 cd backend
 
 pip install -r requirements.txt
 
 uvicorn main:app --reload
+```
 
-Backend runs on:
+Backend:
 
+```txt
 http://127.0.0.1:8000
+```
 
-Swagger docs:
+Swagger Docs:
 
+```txt
 http://127.0.0.1:8000/docs
-3. Frontend Setup
+```
+
+---
+
+### 3. Frontend Setup
+
+```bash
 cd frontend
 
 npm install
 
 npm start
+```
 
-Frontend runs on:
+Frontend:
 
+```txt
 http://localhost:3000
-🔑 Environment Variables
+```
 
-Create a .env file inside /backend
+---
 
+## 🔑 Environment Variables
+
+Create a `.env` file inside `/backend`
+
+```env
 OPENAI_API_KEY=your_api_key_here
-🧠 Why This Project Stands Out
+```
+
+---
+
+## 🧠 Why This Project Stands Out
 
 Most interview prep tools only generate answers.
 
-This project:
+This platform:
+- evaluates architecture quality
+- simulates interviewer pressure
+- detects engineering flaws
+- visualizes distributed systems
+- mimics real FAANG interview flow
 
-evaluates architecture quality
-simulates interviewer pressure
-detects engineering flaws
-visualizes distributed systems
-mimics real FAANG interview flow
-
-It combines:
-
-AI
-distributed systems
-full-stack engineering
-interview simulation
-scalable architecture reasoning
+Combines:
+- AI
+- distributed systems
+- full-stack engineering
+- scalable architecture reasoning
+- interview simulation
 
 into one platform.
 
-🔥 Future Improvements
-Timed interview rounds
-Voice interviewer mode
-Multi-user mock interviews
-Architecture editing canvas
-Real-time collaborative interviews
-Persistent scoring history
-Company-specific interviewer personas
-Kubernetes deployment simulation
-👨‍💻 Author
+---
 
-Built by Vihaan Kesharwani.
+## 🔥 Future Improvements
 
-Focused on scalable systems, AI engineering, and distributed architecture.
+- Timed interview rounds
+- Voice interviewer mode
+- Company-specific interviewer personas
+- Collaborative mock interviews
+- Architecture editing canvas
+- Kubernetes deployment simulation
+- Persistent scoring history
