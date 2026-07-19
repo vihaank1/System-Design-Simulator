@@ -229,3 +229,12 @@ into one platform.
 - Architecture editing canvas
 - Kubernetes deployment simulation
 - Persistent scoring history
+
+## Roadmap
+
+- [x] AI-generated architecture
+- [x] Interactive interviewer
+- [x] Mermaid diagrams
+- [ ] Voice interviews
+- [ ] User authentication
+- [ ] Saved interview history
