@@ -230,6 +230,22 @@ into one platform.
 - Kubernetes deployment simulation
 - Persistent scoring history
 
+
+## Screenshots
+
+### Home
+
+![Home](assets/home.png)
+
+### Interview Review
+
+![Review](assets/review.png)
+
+### Diagram
+
+![Diagram](assets/diagram.png)
+
+
 ## Roadmap
 
 - [x] AI-generated architecture
